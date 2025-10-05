@@ -247,10 +247,10 @@ const QuadroDel100: React.FC<QuadroDel100Props> = ({ selectedOperators, isTestMo
     <div className={`bg-white/90 backdrop-blur-sm p-4 sm:p-8 rounded-2xl shadow-xl border border-white/50 w-full flex flex-col items-center ${!isComponentActive ? 'pointer-events-none opacity-50' : ''}`}>
       <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-700">Il Quadro del 100</h2>
       
-      <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-3 lg:gap-8 items-center mt-8">
+      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 md:gap-8 items-center mt-8">
         
         {/* Main content: Grid of numbers (takes 2/3 of space on lg screens) */}
-        <div className="lg:col-span-2 w-full mx-auto max-w-xl">
+        <div className="md:col-span-2 w-full mx-auto max-w-xl">
           <div className="grid grid-cols-10 gap-1.5 sm:gap-2">
             {numbers.map(num => {
               const hint = hintHighlights[num];
@@ -281,7 +281,7 @@ const QuadroDel100: React.FC<QuadroDel100Props> = ({ selectedOperators, isTestMo
         </div>
 
         {/* Sidebar: Problem (takes 1/3 of space on lg screens) */}
-        <div className="w-full mt-8 pt-8 border-t border-slate-200 lg:mt-0 lg:pt-0 lg:border-t-0">
+        <div className="w-full mt-8 pt-8 border-t border-slate-200 md:mt-0 md:pt-0 md:border-t-0">
           {isComponentActive ? (
             <MathProblem
               num1={num1}
