@@ -27,7 +27,7 @@ const OperatorSelector: React.FC<OperatorSelectorProps> = ({ selectedOperators, 
   };
 
   return (
-    <div className="flex justify-center items-center space-x-2 sm:space-x-4 mb-8">
+    <div className="flex justify-center items-center space-x-2 sm:space-x-4 mb-6">
       <p className="text-slate-700 font-semibold mr-2 hidden sm:block">Scegli le operazioni:</p>
       {operators.map(op => (
         <button
