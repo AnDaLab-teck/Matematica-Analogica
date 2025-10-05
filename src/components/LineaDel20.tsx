@@ -362,7 +362,7 @@ const LineaDel20: React.FC<LineaDel20Props> = ({ selectedOperators, isTestMode, 
           const start = getCenter(jump.from);
           const end = getCenter(jump.to);
 
-          const controlY = start.y - Math.abs(end.x - start.x) * 0.6;
+          const controlY = start.y - Math.min(180, Math.abs(end.x - start.x) * 0.5);
           const pathData = `M${start.x},${start.y} Q${(start.x + end.x) / 2},${controlY} ${end.x},${end.y}`;
           
           const tempPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -457,7 +457,7 @@ const LineaDel20: React.FC<LineaDel20Props> = ({ selectedOperators, isTestMode, 
     ? "relative grid grid-cols-5 gap-2 sm:gap-4 p-4 max-w-md mx-auto"
     : layout === 'grid2x10'
     ? "relative grid grid-cols-10 grid-rows-2 gap-2 sm:gap-4 p-4 max-w-2xl mx-auto"
-    : "relative flex flex-nowrap items-center justify-start md:justify-center gap-2 pt-96 pb-4 px-2 overflow-x-auto";
+    : "relative flex flex-nowrap items-center justify-start md:justify-center gap-2 pt-48 pb-4 px-2 overflow-x-auto";
 
 
   return (
