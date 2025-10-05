@@ -112,13 +112,13 @@ const App: React.FC = () => {
         <TestReportModal results={testResults} onClose={handleCloseReport} />
       )}
 
-      <header className="text-center mb-8">
+      <header className="text-center mb-6">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-800 tracking-tight">
           Matematica Analogica
         </h1>
       </header>
 
-      <div className="bg-white/60 backdrop-blur-sm p-4 rounded-xl shadow-md mb-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+      <div className="bg-white/60 backdrop-blur-sm p-4 rounded-xl shadow-md mb-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
         <nav className="flex space-x-4">
           <TabButton view="linea" label="Linea del 20" activeView={activeView} onClick={setActiveView} disabled={isTestRunning}/>
           <TabButton view="quadro" label="Quadro del 100" activeView={activeView} onClick={setActiveView} disabled={isTestRunning}/>
@@ -149,7 +149,7 @@ const App: React.FC = () => {
       { !isTestMode ? (
          <OperatorSelector selectedOperators={practiceOperators} onOperatorChange={setPracticeOperators} />
       ) : isTestRunning && (
-        <div className="text-center bg-white/80 py-2 px-6 rounded-full shadow-inner mb-8">
+        <div className="text-center bg-white/80 py-2 px-6 rounded-full shadow-inner mb-6">
             <p className="text-slate-800 font-bold text-lg">
                 Domanda {Math.min(10, testResults.length + 1)} di 10
             </p>
